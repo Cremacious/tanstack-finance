@@ -9,6 +9,7 @@
     "start": "node .output/server/index.mjs"
   },
   "dependencies": {
+    "@clerk/tanstack-react-start": "^0.21.3",
     "@radix-ui/react-slot": "^1.2.3",
     "@tanstack/react-router": "^1.130.2",
     "@tanstack/react-router-devtools": "^1.130.2",
