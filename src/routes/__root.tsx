@@ -20,8 +20,14 @@ import {
   UserButton,
 } from '@clerk/tanstack-react-start';
 import { Button } from '~/components/ui/button';
+import { getSignedInUserId } from '~/data/getSignedInUserId';
 
 export const Route = createRootRoute({
+  notFoundComponent: () => <div>Not Found</div>,
+  beforeLoad: async () => {
+    const userId = await getSignedInUserId();
+    return { userId };
+  },
   head: () => ({
     meta: [
       {
@@ -91,7 +97,7 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
                       label="Dashboard"
                       labelIcon={<ChartColumnBigIcon size={16} />}
                       onClick={() => {
-                        navigate({ to: '/' });
+                        navigate({ to: '/dashboard' });
                       }}
                     />
                   </UserButton.MenuItems>
