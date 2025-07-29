@@ -17,7 +17,7 @@ export const Route = createFileRoute(
 function RouteComponent() {
   return (
     <div className="max-w-screen-xl mx-auto py-10">
-      <Breadcrumb>
+      <Breadcrumb className="mb-2">
         <BreadcrumbList>
           <BreadcrumbItem>
             <BreadcrumbLink asChild>
@@ -33,7 +33,7 @@ function RouteComponent() {
           <BreadcrumbSeparator />
           <BreadcrumbItem>
             <BreadcrumbLink asChild>
-             <BreadcrumbPage>New Transaction</BreadcrumbPage>
+              <BreadcrumbPage>New Transaction</BreadcrumbPage>
             </BreadcrumbLink>
           </BreadcrumbItem>
         </BreadcrumbList>

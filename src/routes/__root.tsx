@@ -100,6 +100,13 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
                         navigate({ to: '/dashboard' });
                       }}
                     />
+                    <UserButton.Action
+                      label="Transactions"
+                      labelIcon={<ChartColumnBigIcon size={16} />}
+                      onClick={() => {
+                        navigate({ to: '/dashboard/transactions' });
+                      }}
+                    />
                   </UserButton.MenuItems>
                 </UserButton>
               </SignedIn>
